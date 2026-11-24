@@ -1,0 +1,26 @@
+cabal-version:      3.0
+name:               stockeasy
+version:            0.1.0.0
+author:             Julia
+maintainer:         souzasjulia14@gmail.com
+category:           Web
+build-type:         Simple
+
+executable stockeasy
+    main-is:          Main.hs
+    other-modules:    Models
+                      Queries
+                      Handler
+    build-depends:    base,
+                      servant,
+                      servant-server,
+                      warp,
+                      wai,
+                      aeson,
+                      mysql-simple,
+                      text,
+                      time,
+                      mtl
+    hs-source-dirs:   app
+    default-language: Haskell2010
+    ghc-options:      -Wall -threaded -rtsopts "-with-rtsopts=-N"
